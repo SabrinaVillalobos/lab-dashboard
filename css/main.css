@@ -58,6 +58,7 @@ ul {
     margin-right: auto;
     display: table-cell;
     padding: 8px;
+    padding-bottom: 3px;
 }
 .username {
     text-align: center;
