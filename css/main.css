@@ -23,6 +23,13 @@ html {
     padding-left: 20px;
     float: left;
 }
+
+.labicos {
+	padding-left:4px;
+	width: auto;
+    height: 55px;
+    float: left;
+}
 .sidebar {
     width: 200px;
     background-color: #fff;
@@ -88,11 +95,19 @@ ul {
     padding-left: 25px;
     margin-right: 20px;
 }
-#iconbar {
+#iconbar{
     float: left;
     line-height: 40px;
     margin-top: 6px;
     margin-left: 30px;
+    cursor:pointer;
+}
+#iconbars {
+    float: left;
+    line-height: 40px;
+    margin-top: 6px;
+    margin-left: 10px;
+    cursor:pointer;
 }
 p.sede,
 p.year {
@@ -105,4 +120,8 @@ p.year {
 #downico {
     margin: 5px;
     margin-left: 0;
+}
+
+.letterico {
+	display: inline-block;
 }
