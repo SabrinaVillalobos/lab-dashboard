@@ -225,8 +225,122 @@ p.year {
 	margin-bottom: 30px;
 }
 
-#drop {
-    background-color: red;
-    width: 100px;
-    height: 100px;
+.dropbtn {
+    background-color:inherit;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    outline: 0;
 }
+
+.dropbtnp {
+    background-color:inherit;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    outline: 0;
+    position: relative;
+}
+
+.dropbtnl {
+    background-color:inherit;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    outline: 0;
+    position: relative;
+}
+.dropbtn:hover, .dropbtn:focus, .dropbtnp:hover, .dropbtnp:focus,
+.dropbtnl:hover, .dropbtnl:focus,  {
+    background-color: inherit;
+}
+
+.dropdown {
+    float: right;
+    position: relative;
+    display: inline-block;
+    
+}
+
+.dropdownp{
+    float: right;
+    position: relative;
+    display: inline-block;
+    }
+
+.dropdownl {
+    float: right;
+    position: relative;
+    display: inline-block;
+    
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 120px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    right: 70px;
+    z-index: 1;
+}
+
+.dropdownp-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    right: 200px;
+    z-index: 1;
+}
+
+.dropdownl-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 60px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    right: 0;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    padding-left: 22px;
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+.dropdownp-content a  {
+    padding-left: 20px;
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+.dropdownl-content a  {
+    padding-left: 10px;
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover,.dropdownp a:hover, .dropdownl a:hover  {
+    background-color: #f1f1f1
+}
+
+#language {
+    width: 25px;
+    height: 25px;
+    top:9px;
+    position: relative;
+}
+.show {
+    display:block;
+}
+

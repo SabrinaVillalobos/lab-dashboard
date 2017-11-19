@@ -61,6 +61,24 @@ downico.addEventListener("click", function(){
 	nav.appendChild(dropmenu);
 });*/
 
+
+//dropdown de paises al hacer click
+var chile = document.getElementById("chile")
+chile.addEventListener("click", function(){
+    document.getElementById("myDropdownp").classList.toggle("show");
+});
+
+//dropdown de año grupo y turno abre al hacer click
+downico.addEventListener("click", function(){
+    document.getElementById("myDropdown").classList.toggle("show");
+});
+
+//dropdown cambiar idioma
+var language = document.getElementById("language")
+language.addEventListener("click", function(){
+    document.getElementById("myDropdownl").classList.toggle("show");
+});
+
 //gráfico de estudiantes presentes y deserción de estudiantes, 59 inscritas, 33 inactivas 60%
 var canvas = document.getElementById('graph1');
 var data = {
