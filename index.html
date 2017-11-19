@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+     <script src="assets/charts/Chart.bundle.min.js"></script>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
     <link rel="stylesheet" href="css/main.css">
@@ -11,6 +12,7 @@
   
   </head>
   <body>
+
     <header><!-- inicio de la barras de navegación -->
       
       <div class="nav"><a href="sabrinavillalobos.github.io/lab-dashboard"><img class="labico" id="labico" src="assets/images/logo-laboratoria.gif" alt="laboratoria-icon">
@@ -18,6 +20,8 @@
 
         <i class="fa fa-bars" id="iconbar" aria-hidden="true" ></i><i class="fa fa-bars" id="iconbars" aria-hidden="true" ></i><span class="lettersup"> <span class="sede">Santiago de Chile</span> <img src="assets/images/cl.png" alt=""> <span class="year">2017 - II AM </span><i class="fa fa-chevron-down" id="downico" aria-hidden="true"></i></span>
       </div> <!-- fin de barra de navegación principal -->
+
+    </header>
 
       <div class="sidebar" id="sidebar"> <!-- inicio de barra de navegacion secundaria -->
         <div class="usercontainer"><img class="userpic" id="userpic" src="assets/images/vale.png" alt="userpic"></div><p class="username" id="username">User Name</p>
@@ -32,12 +36,24 @@
   <li><a href="#contact" class="fontico"><i class="fa fa-sign-out" id="icon6" aria-hidden="true"></i><p class="letterico">Log out</a></li>
     <li><a href="#contact" class="fontico"><i class="fa fa-home" id="icon7" aria-hidden="true"></i><p class="letterico">Home</p></a></li>
 </ul></div></div><!-- inicio de barra de navegacion secundaria -->
-      
-    </header> <!-- fin barras de navegación -->
+    
+
+    <!-- inicio de gáficos -->
+    <div class="contgraphs" id="contgraphs">
+      <div class="totalstudents"><canvas class="graph1" id="graph1"></canvas></div>
+
+        <div class="superanmeta"><canvas class="graph2" id="graph1"></canvas></div>
+
+        <div class="nps"><canvas class="graph2" id="graph1"></canvas></div>
+
+    </div>
 
     <!-- Base de datos -->
     <script src="./js/data.js"></script>
     <!-- Aquí va tus archivos JS -->
     <script src="./js/app.js"></script>
+   
+
+
   </body>
 </html>
