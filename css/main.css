@@ -4,6 +4,7 @@ html {
     padding: 0;
     background-color: #DFDEDE;
     font-family: Roboto;
+    overflow-x: hidden;
 }
 .nav {
     position: fixed;
@@ -123,6 +124,7 @@ p.year {
 #downico {
     margin: 5px;
     margin-left: 0;
+    cursor: pointer;
 }
 
 .letterico {
@@ -134,23 +136,22 @@ p.year {
 	height:100vh;
 	top:55px;
 	left:200px;
-	position:fixed;
+	position:absolute;
 }
 
 .graph1 {
 	width: 80px;
 	height: 80px;
 	border-radius: 20px;
-	margin-top: 20px;
+	margin-top: 30px;
 	display: inline-block;
 
 }
 .totalstudents {
 	background-color: #000;
 	width: 300px;
-	top:10px;
-	margin-top:20px;
-	margin-left: 100px;
+	margin-top:30px;
+	margin-left: 80px;
 	border-radius: 20px;
 
 
@@ -162,8 +163,9 @@ p.year {
 	margin-left: 30px;
 	border-radius: 20px;
 	position: absolute;
-	left:400px;
-	top:19px;
+	left:390px;
+	top:0;
+	margin-top:30px;
 }
 
 .nps{
@@ -173,5 +175,58 @@ p.year {
 	border-radius: 20px;
 	position: absolute;
 	left:730px;
-	top:19px;
+	top:0;
+	margin-top:30px;
+}
+
+.superatechse{
+	background-color: red;
+	width: 600px;
+	height: 250px;
+	margin-left: 30px;
+	border-radius: 20px;
+	position: absolute;
+	left:50px;
+	top:210px;
+}
+
+.satis{
+	background-color: blue;
+	width: 340px;
+	height: 250px;
+	margin-left: 20px;
+	border-radius: 20px;
+	position: absolute;
+	left:700px;
+	top:211px;
+}
+
+.promprofjedi{
+	background-color: #DA00D7;
+	width: 472px;
+	height: 250px;
+	margin-left: 30px;
+	border-radius: 20px;
+	position: absolute;
+	left:50px;
+	top:490px;
+	margin-bottom: 30px;
+}
+
+.satisfsprint{
+	background-color: #00AEDA;
+	width: 472px;
+	height: 255px;
+	margin-left: 540px;
+	border-radius: 20px;
+	position: absolute;
+	left:50px;
+	top:490px;
+	margin-bottom: 30px;
+}
+
+#drop {
+    background-color: red;
+    width: 100px;
+    height: 100px;
 }

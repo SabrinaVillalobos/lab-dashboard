@@ -17,6 +17,7 @@ var iconsede = document.getElementById("icon1");
 var icconspad = document.getElementsByClassName("fontico");
 var labico = document.getElementById("labico");
 var labicos = document.getElementById("labicos");
+var downico = document.getElementById("downico");
 var graphscontainer = document.getElementById("contgraphs");
 var iconscontainer = document.getElementsByClassName("letterico");
 labicos.style.display="none";
@@ -52,7 +53,15 @@ iconavs.addEventListener("click", function(){
 	window.location.reload(false);
 });
 
-//gráfico de estudiantes presentes y deserción de estudiantes
+/* intentando darle funcionalidad al boton de año
+downico.addEventListener("click", function(){
+	var nav= document.getElementById("nav");
+	var dropmenu = document.createElement("div");
+	dropmenu.id = "drop"
+	nav.appendChild(dropmenu);
+});*/
+
+//gráfico de estudiantes presentes y deserción de estudiantes, 59 inscritas, 33 inactivas 60%
 var canvas = document.getElementById('graph1');
 var data = {
     labels: ["# Currently enrolled", "% Dropout"],
@@ -64,7 +73,7 @@ var data = {
             borderWidth: 2,
             hoverBackgroundColor: "#CA9A09",
             hoverBorderColor: "#715604",
-            data: [61, 52],
+            data: [59, 60],
         }
     ]
 };
