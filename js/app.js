@@ -53,14 +53,6 @@ iconavs.addEventListener("click", function(){
 	window.location.reload(false);
 });
 
-/* intentando darle funcionalidad al boton de año
-downico.addEventListener("click", function(){
-	var nav= document.getElementById("nav");
-	var dropmenu = document.createElement("div");
-	dropmenu.id = "drop"
-	nav.appendChild(dropmenu);
-});*/
-
 
 //dropdown de paises al hacer click
 var chile = document.getElementById("chile")
@@ -120,4 +112,21 @@ var myBarChart = Chart.Bar(canvas,{
   options:option
 });
 
+//muestra el home con los graficos
+var homebtn = document.getElementById("home");
+homebtn.addEventListener("click", function(){
+graphscontainer.style.display="block";
+});
 
+//oculta el home para mostrar las estudintes
+var studentsbtn = document.getElementById("students");
+studentsbtn.addEventListener("click", function(){
+graphscontainer.style.display="none";
+
+document.createElement("div");
+document.getElementById("main").appendChild(div);
+
+
+
+
+});
