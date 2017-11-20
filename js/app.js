@@ -1,10 +1,8 @@
 /*
  * Funcionalidad de tu producto
  */
-
 // Puedes hacer uso de la base de datos a través de la variable `data`
 console.log(data);
-
 
 
 //funcion que achica la barra de navegacion secundaria
@@ -128,6 +126,8 @@ var studentsbtn = document.getElementById("students");
 studentsbtn.addEventListener("click", function(){
 graphscontainer.style.display="none";
 studentscontainer.style.display="block";
+
+
 
 /*
 document.createElement("div");
