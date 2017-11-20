@@ -1,204 +1,271 @@
 <!DOCTYPE html>
 <html>
-  <head>
-     <script src="assets/charts/Chart.bundle.min.js"></script>
-    <meta charset="utf-8">
-    <title>Data Dashboard</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="icon" href="assets/images/favicon.ico">
-    <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
-  
-  </head>
-  <body>
-
-    <header><!-- inicio de la barras de navegación -->
-      
-      <div class="nav" id="nav"><a href="sabrinavillalobos.github.io/lab-dashboard"><img class="labico" id="labico" src="assets/images/logo-laboratoria.gif" alt="laboratoria-icon">
-        <img class="labicos" id="labicos" src="assets/images/labsmallico.png" alt="laboratoriasmall-icon"></a> <!-- inicio barra de navegación principal (arriba) -->
-
-        <i class="fa fa-bars" id="iconbar" aria-hidden="true" ></i><i class="fa fa-bars" id="iconbars" aria-hidden="true" ></i><span class="lettersup" id="lettersup"><span class="sede">Santiago de Chile
-
-        <!-- menú dropdown pais-->
- 
-<button class="dropbtnp"> <img id="chile" src="assets/images/cl.png" alt="Chile"></button>
-  <div id="myDropdownp" class="dropdownp-content">
-    <a href="#">Arequipa Perú</a>
-    <a href="#">Lima Perú</a>
-    <a href="#">Ciudad de México</a>
-    <a href="#">Santiago de Chile</a>
- 
-</div>
-<!-- fin menú dropdown pais --> 
-
- <span class="year">2017 - II AM </span>
-
-<!-- menú dropdown del año, grupo y turno -->
-  
-<button class="dropbtn"><i class="fa fa-chevron-down" id="downico" aria-hidden="true"></i></button>
-  <div id="myDropdown" class="dropdown-content">
-    <a href="#">2016 - I AM</a>
-    <a href="#">2016 - I PM</a>
-    <a href="#c">2016 - II AM</a>
-     <a href="#">2016 - II PM</a>
-    <a href="#">2017 - I AM</a>
-    <a href="#">2017 - I PM</a>
-     <a href="#">2017 - II AM</a>
-    <a href="#">2017 - II PM</a>
- 
-</div>
-<!-- fin menú dropdown del año, grupo y turno -->
-
-<!-- menú dropdown idioma -->
-
-
-  
-<button class="dropbtnl"><img id="language" src="assets/images/lang.png" alt="language"></button>
-  <div id="myDropdownl" class="dropdownl-content">
-    <a href="#">SP <img id="chile" src="assets/images/es.png" alt="Chile"></a>
-    <a href="#">EN <img id="chile" src="assets/images/us.png" alt="Chile"></a>
-    <a href="#c">PT <img id="chile" src="assets/images/pt.png" alt="Chile"></a>
-</div>
-
-
-
-      </div> <!-- fin de barra de navegación principal -->
-
-    </header>
-
-      <div class="sidebar" id="sidebar"> <!-- inicio de barra de navegacion secundaria -->
-        <div class="usercontainer"><img class="userpic" id="userpic" src="assets/images/vale.png" alt="userpic"></div><p class="username" id="username">Usuario</p>
-
-<div class="navbuttons" id="navbuttons">
-      <ul id="icon">
-         <li id="home"><a href="#" class="fontico"><i class="fa fa-home" id="icon7" aria-hidden="true"></i><p class="letterico">Inicio</p></a></li>
-  
-  <li id="students"><a href="#" class="fontico"><i class="fa fa-users" id="icon2" aria-hidden="true"></i> <p class="letterico">Estudiantes</p></a></li>
-  <li><a href="#" class="fontico"><i class="fa fa-user-plus" id="icon3" aria-hidden="true"></i> <p class="letterico">Añadir Estudiantes</p></a></li>
-  <li><a href="#" class="fontico"><i class="fa fa-user-times" id="icon4" aria-hidden="true"></i> <p class="letterico">Quitar estudiantes</p></a></li>
-  <li><a href="#" class="fontico"><i class="fa fa-sitemap" id="icon5" aria-hidden="true"></i> <p class="letterico">Agregar un Sprint</p></a></li>
-  <li><a href="#" class="fontico"><i class="fa fa-map-marker" id="icon1" aria-hidden="true"></i> <p class="letterico">Sedes</p></a></li>
-  <li><a href="#" class="fontico"><i class="fa fa-sign-out" id="icon6" aria-hidden="true"></i><p class="letterico">Desconectarse</a></li>
-</ul></div></div><!-- inicio de barra de navegacion secundaria -->
-    
-
-    <!-- inicio de gáficos -->
-    <div class="contgraphs" id="contgraphs">
-      
-      <div class="totalstudents"><canvas class="graph1" id="graph1"></canvas></div>
-
-        <div class="superanmeta"><canvas class="graph2" id="graph2"></canvas></div>
-
-        <div class="nps"><canvas class="graph3" id="graph3"></canvas></div>
-
-         <div class="superatechse"><canvas class="graph4" id="graph4"></canvas></div>
-
-         <div class="satis"><canvas class="graph5" id="graph5"></canvas></div>
-
-         <div class="promprofjedi"><canvas class="graph6" id="graph6"></canvas></div>
-
-          <div class="satisfsprint"><canvas class="graph7" id="graph7"></canvas></div>
-
-
-<!-- inicio fieldset de pag estudiantes (filtra alumnas) -->
-    </div>
-
-          <div class="studentscontainer" id="studentscontainer" style="display:none;"">
-            <div class="specializationcont" id="specializationcont">
-              
-<fieldset class="field">
-  <div>  <legend>Especialización</legend></br>
-    <input type="checkbox" id="javascript" name="spz" value="javascript" checked>
-    <label for="javascript">Javascript</label>
-  </div>
-  <div>
-    <input type="checkbox" id="ux" name="spz" value="ux">
-    <label for = "ux">UX Design</label>
+   <head>
+      <script src="assets/charts/Chart.bundle.min.js"></script>
+      <meta charset="utf-8">
+      <title>Data Dashboard</title>
+      <link rel="stylesheet" href="css/main.css">
+      <link rel="icon" href="assets/images/favicon.ico">
+      <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+   </head>
+   <body>
+      <header>
+         <!-- inicio de la barras de navegación -->
+         <div class="nav" id="nav">
+            <a href="sabrinavillalobos.github.io/lab-dashboard"><img class="labico" id="labico" src="assets/images/logo-laboratoria.gif" alt="laboratoria-icon">
+            <img class="labicos" id="labicos" src="assets/images/labsmallico.png" alt="laboratoriasmall-icon"></a> <!-- inicio barra de navegación principal (arriba) -->
+            <i class="fa fa-bars" id="iconbar" aria-hidden="true" ></i><i class="fa fa-bars" id="iconbars" aria-hidden="true" ></i><span class="lettersup" id="lettersup"><span class="sede">Santiago de Chile
+            <!-- menú dropdown pais-->
+            <button class="dropbtnp"> <img id="chile" src="assets/images/cl.png" alt="Chile"></button>
+            <div id="myDropdownp" class="dropdownp-content">
+               <a href="#">Arequipa Perú</a>
+               <a href="#">Lima Perú</a>
+               <a href="#">Ciudad de México</a>
+               <a href="#">Santiago de Chile</a>
             </div>
-              <div>
-    <input type="checkbox" id="Front end Designer" name="spz" value="Front end Designer">
-    <label for = "Front end Designer">Front end Designer</br></label></br>
-
-
-    <legend>Ordenar por:</legend></br>
-    <input type="checkbox" id="studentname" name="order" value="studentname" checked>
-    <label for="studentname">Nombre</label>
-  </div>
-  <div>
-    <input type="checkbox" id="tech" name="order" value="tech">
-    <label for = "tech">Habilidades técnicas</label>
+            <!-- fin menú dropdown pais --> 
+            <span class="year">2017 - II AM </span>
+            <!-- menú dropdown del año, grupo y turno -->
+            <button class="dropbtn"><i class="fa fa-chevron-down" id="downico" aria-hidden="true"></i></button>
+            <div id="myDropdown" class="dropdown-content">
+               <a href="#">2016 - I AM</a>
+               <a href="#">2016 - I PM</a>
+               <a href="#c">2016 - II AM</a>
+               <a href="#">2016 - II PM</a>
+               <a href="#">2017 - I AM</a>
+               <a href="#">2017 - I PM</a>
+               <a href="#">2017 - II AM</a>
+               <a href="#">2017 - II PM</a>
             </div>
-              <div>
-    <input type="checkbox" id="hse" name="order" value="hse">
-    <label for = "hse">Habilidades sociales</label>
+            <!-- fin menú dropdown del año, grupo y turno -->
+            <!-- menú dropdown idioma -->
+            <button class="dropbtnl"><img id="language" src="assets/images/lang.png" alt="language"></button>
+            <div id="myDropdownl" class="dropdownl-content">
+               <a href="#">SP <img id="chile" src="assets/images/es.png" alt="Chile"></a>
+               <a href="#">EN <img id="chile" src="assets/images/us.png" alt="Chile"></a>
+               <a href="#c">PT <img id="chile" src="assets/images/pt.png" alt="Chile"></a>
             </div>
-            <div>
-    <input type="checkbox" id="enlvl" name="order" value="enlvl">
-    <label for = "enlvl">Nivel de inglés</br></label></br>
-
-
-    <legend>Skills destacados:</legend></br>
-    <input type="checkbox" id="ajax" name="skills" value="ajax" checked>
-    <label for="ajax">AJAX</label>
-  </div>
-  <div>
-    <input type="checkbox" id="algth" name="skills" value="algth">
-    <label for = "algth">Algorithmic thinking</label>
-            </div>
-              <div>
-    <input type="checkbox" id="css" name="skills" value="css">
-    <label for = "css">CSS</label>
-            </div>
-            <div>
-    <input type="checkbox" id="git" name="skills" value="git">
-    <label for = "git">Git</label>
-            </div>
-             <div>
-    <input type="checkbox" id="html5" name="skills" value="html5">
-    <label for = "html5">HTML5</label>
-            </div>
-             <div>
-    <input type="checkbox" id="prodtools" name="skills" value="prodtoolsx">
-    <label for = "prodtools">Herramientas de productividad</label>
-            </div>
-             <div>
-    <input type="checkbox" id="json" name="skills" value="json">
-    <label for = "json">JSON</label>
-            </div>
-             <div>
-    <input type="checkbox" id="js" name="skills" value="js">
-    <label for = "js">JavaScript</label>
-            </div>
-             <div>
-    <input type="checkbox" id="proto" name="skills" value="roto">
-    <label for = "roto">Prototyping</label>
-            </div>
-             <div>
-    <input type="checkbox" id="seo" name="skills" value="se">
-    <label for = "se">SEO</label>
-            </div>
-             <div>
-    <input type="checkbox" id="uxd" name="skills" value="uxd">
-    <label for = "uxd">UXD</label>
-            </div>
-             <div>
-    <input type="checkbox" id="usertest" name="skills" value="usertest">
-    <label for = "usertest">User Testing</label>
-            </div>
-                <div>
-    <input type="checkbox" id="jquery" name="skills" value="jquery">
-    <label for = "jquery">JQuery</label>
-            </div>
-            <!-- fin fieldset de pag estudiantes (filtra alumnas) -->
-
-            <div class="contst" id="contst"></div>
-
-    <!-- Base de datos -->
-    <script src="./js/data.js"></script>
-    <!-- Aquí va tus archivos JS -->
-    <script src="./js/app.js"></script>
-   
-
-
-  </body>
+         </div>
+         <!-- fin de barra de navegación principal -->
+      </header>
+      <div class="sidebar" id="sidebar">
+         <!-- inicio de barra de navegacion secundaria -->
+         <div class="usercontainer"><img class="userpic" id="userpic" src="assets/images/vale.png" alt="userpic"></div>
+         <p class="username" id="username">Usuario</p>
+         <div class="navbuttons" id="navbuttons">
+            <ul id="icon">
+               <li id="home">
+                  <a href="#" class="fontico">
+                     <i class="fa fa-home" id="icon7" aria-hidden="true"></i>
+                     <p class="letterico">Inicio</p>
+                  </a>
+               </li>
+               <li id="students">
+                  <a href="#" class="fontico">
+                     <i class="fa fa-users" id="icon2" aria-hidden="true"></i> 
+                     <p class="letterico">Estudiantes</p>
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="fontico">
+                     <i class="fa fa-user-plus" id="icon3" aria-hidden="true"></i> 
+                     <p class="letterico">Añadir Estudiantes</p>
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="fontico">
+                     <i class="fa fa-user-times" id="icon4" aria-hidden="true"></i> 
+                     <p class="letterico">Quitar estudiantes</p>
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="fontico">
+                     <i class="fa fa-sitemap" id="icon5" aria-hidden="true"></i> 
+                     <p class="letterico">Agregar un Sprint</p>
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="fontico">
+                     <i class="fa fa-map-marker" id="icon1" aria-hidden="true"></i> 
+                     <p class="letterico">Sedes</p>
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="fontico">
+                     <i class="fa fa-sign-out" id="icon6" aria-hidden="true"></i>
+                     <p class="letterico">Desconectarse
+                  </a>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <!-- inicio de barra de navegacion secundaria -->
+      <!-- inicio de gáficos -->
+      <div class="contgraphs" id="contgraphs">
+         <div class="totalstudents">
+            <canvas class="graph1" id="graph1"></canvas>
+         </div>
+         <div class="superanmeta">
+            <canvas class="graph2" id="graph2"></canvas>
+         </div>
+         <div class="nps">
+            <canvas class="graph3" id="graph3"></canvas>
+         </div>
+         <div class="superatechse">
+            <canvas class="graph4" id="graph4"></canvas>
+         </div>
+         <div class="satis">
+            <canvas class="graph5" id="graph5"></canvas>
+         </div>
+         <div class="promprofjedi">
+            <canvas class="graph6" id="graph6"></canvas>
+         </div>
+         <div class="satisfsprint">
+            <canvas class="graph7" id="graph7"></canvas>
+         </div>
+         <!-- inicio fieldset de pag estudiantes (filtra alumnas) -->
+      </div>
+      <div class="studentscontainer" id="studentscontainer" style="display:none;"">
+      <div class="specializationcont" id="specializationcont">
+      <fieldset class="field">
+      <div>
+         <legend>Especialización</legend>
+         </br>
+         <input type="checkbox" id="javascript" name="spz" value="javascript" checked>
+         <label for="javascript">Javascript</label>
+      </div>
+      <div>
+         <input type="checkbox" id="ux" name="spz" value="ux">
+         <label for = "ux">UX Design</label>
+      </div>
+      <div>
+         <input type="checkbox" id="Front end Designer" name="spz" value="Front end Designer">
+         <label for = "Front end Designer">Front end Designer</br></label></br>
+         <legend>Ordenar por:</legend>
+         </br>
+         <input type="checkbox" id="studentname" name="order" value="studentname" checked>
+         <label for="studentname">Nombre</label>
+      </div>
+      <div>
+         <input type="checkbox" id="tech" name="order" value="tech">
+         <label for = "tech">Habilidades técnicas</label>
+      </div>
+      <div>
+         <input type="checkbox" id="hse" name="order" value="hse">
+         <label for = "hse">Habilidades sociales</label>
+      </div>
+      <div>
+         <input type="checkbox" id="enlvl" name="order" value="enlvl">
+         <label for = "enlvl">Nivel de inglés</br></label></br>
+         <legend>Skills destacados:</legend>
+         </br>
+         <input type="checkbox" id="ajax" name="skills" value="ajax" checked>
+         <label for="ajax">AJAX</label>
+      </div>
+      <div>
+         <input type="checkbox" id="algth" name="skills" value="algth">
+         <label for = "algth">Algorithmic thinking</label>
+      </div>
+      <div>
+         <input type="checkbox" id="css" name="skills" value="css">
+         <label for = "css">CSS</label>
+      </div>
+      <div>
+         <input type="checkbox" id="git" name="skills" value="git">
+         <label for = "git">Git</label>
+      </div>
+      <div>
+         <input type="checkbox" id="html5" name="skills" value="html5">
+         <label for = "html5">HTML5</label>
+      </div>
+      <div>
+         <input type="checkbox" id="prodtools" name="skills" value="prodtoolsx">
+         <label for = "prodtools">Herramientas de productividad</label>
+      </div>
+      <div>
+         <input type="checkbox" id="json" name="skills" value="json">
+         <label for = "json">JSON</label>
+      </div>
+      <div>
+         <input type="checkbox" id="js" name="skills" value="js">
+         <label for = "js">JavaScript</label>
+      </div>
+      <div>
+         <input type="checkbox" id="proto" name="skills" value="roto">
+         <label for = "roto">Prototyping</label>
+      </div>
+      <div>
+         <input type="checkbox" id="seo" name="skills" value="se">
+         <label for = "se">SEO</label>
+      </div>
+      <div>
+         <input type="checkbox" id="uxd" name="skills" value="uxd">
+         <label for = "uxd">UXD</label>
+      </div>
+      <div>
+         <input type="checkbox" id="usertest" name="skills" value="usertest">
+         <label for = "usertest">User Testing</label>
+      </div>
+      <div>
+         <input type="checkbox" id="jquery" name="skills" value="jquery">
+         <label for = "jquery">JQuery</label>
+      </div>
+      <!-- fin fieldset de pag estudiantes (filtra alumnas) -->
+      <!-- inicio contenedor data estudiantes -->
+      <div class="contst" id="contst">
+         <div><img class="studentpic" id="studentpic" src="assets/images/user.png" alt="studentpic"><span class="studentname" id="studentname"> Donna Sloper</span></div>
+         <div class="techstu" id="trechstu">
+            <p class="techtext">Tech 81%</p>
+         </div>
+         <div class="lifestu" id="lifestu">
+            <p class="lifetext">HSE 74%</p>
+         </div>
+         <div class="engstu" id="engstu">
+            <p class="engtext">Inglés Intermedio</p>
+         </div>
+      </div>
+      <div class="contst2" id="contst2">
+         <div><img class="studentpic" id="studentpic" src="assets/images/user.png" alt="studentpic"><span class="studentname" id="studentname"> Roana Menego</span></div>
+         <div class="techstu" id="trechstu">
+            <p class="techtext">Tech 72%</p>
+         </div>
+         <div class="lifestu" id="lifestu">
+            <p class="lifetext">HSE 74%</p>
+         </div>
+         <div class="engstu" id="engstu">
+            <p class="engtext">Inglés Intermedio</p>
+         </div>
+      </div>
+      <div class="contst3" id="contst3">
+      <div><img class="studentpic" id="studentpic" src="assets/images/user.png" alt="studentpic"><span class="studentname" id="studentname"> Ofella Weakley</span></div>
+      <div class="techstu" id="trechstu">
+         <p class="techtext">Tech 83%</p>
+      </div>
+      <div class="lifestu" id="lifestu">
+         <p class="lifetext">HSE 84%</p>
+      </div>
+      <div class="engstu" id="engstu">
+         <p class="engtext">Inglés Intermedio</p>
+      </div>
+         <!-- fin contenedor data estudiantes -->
+         <!-- inicio botones atras adelante -->
+      <div class="gallery gallery1">
+         <div class="prev-next-button previous">
+            <svg viewbox="0 0 100 100">
+               <path class="arrow" d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z" transform=" translate(15,0)">
+            </svg>
+         </div>
+         <div class="prev-next-button next">
+            <svg viewbox="0 0 100 100">
+               <path class="arrow" d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z "transform="translate(85,100) rotate(180) ">
+            </svg>
+         </div>
+      </div>
+        <!-- fin botones atras adelante -->
+      <!-- Base de datos -->
+      <script src="js/data.js"></script>
+      <!-- Aquí va tus archivos JS -->
+      <script src="js/app.js"></script>
+   </body>
 </html>
