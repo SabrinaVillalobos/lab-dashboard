@@ -18,6 +18,7 @@ var icconspad = document.getElementsByClassName("fontico");
 var labico = document.getElementById("labico");
 var labicos = document.getElementById("labicos");
 var downico = document.getElementById("downico");
+var studentscontainer = document.getElementById("studentscontainer");
 var graphscontainer = document.getElementById("contgraphs");
 var iconscontainer = document.getElementsByClassName("letterico");
 labicos.style.display="none";
@@ -32,6 +33,7 @@ iconav.addEventListener("click", function(){
 	iconavs.style.display="block";
 	iconav.style.display="none";
 	graphscontainer.style.left="60px";
+	studentscontainer.style.left="60px";
 
 
 
@@ -114,19 +116,25 @@ var myBarChart = Chart.Bar(canvas,{
 
 //muestra el home con los graficos
 var homebtn = document.getElementById("home");
+var hidestid = document.getElementById("studentscontainer");
 homebtn.addEventListener("click", function(){
 graphscontainer.style.display="block";
+hidestid.style.display="none";
+
 });
 
 //oculta el home para mostrar las estudintes
 var studentsbtn = document.getElementById("students");
 studentsbtn.addEventListener("click", function(){
 graphscontainer.style.display="none";
+studentscontainer.style.display="block";
 
+/*
 document.createElement("div");
 document.getElementById("main").appendChild(div);
-
+*/
 
 
 
 });
+
