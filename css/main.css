@@ -145,21 +145,42 @@ p.year {
 	border-radius: 20px;
 	margin-top: 30px;
 	display: inline-block;
-
 }
+
+#graph1, #graph3, #graph2{
+    max-width: 150px;
+    display: inline-block;
+    float: left;
+    padding: 5px 0 0 25px;
+    font-size: 26px;
+}
+
+#graph1 p {
+    color: #FFC107;
+}
+
+.iconstudents {
+    display: inline-block;
+    float: left;
+    font-size: 60px;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
 .totalstudents {
-	background-color: #000;
+	background-color: #333333;
 	width: 300px;
+    height: 100px;
 	margin-top:30px;
 	margin-left: 80px;
 	border-radius: 20px;
-
-
+    color: #FFC107;
 }
 
-.superanmeta {
+.quit {
 	background-color: #FFC107;
 	width: 300px;
+    height: 100px;
 	margin-left: 30px;
 	border-radius: 20px;
 	position: absolute;
@@ -168,21 +189,40 @@ p.year {
 	margin-top:30px;
 }
 
+.iconquit{
+    display: inline-block;
+    float: left;
+    font-size: 60px;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
 .nps{
-	background-color: #000;
+	background-color: #333333;
 	width: 300px;
+    height: 100px;
 	margin-left: 30px;
 	border-radius: 20px;
 	position: absolute;
 	left:730px;
 	top:0;
 	margin-top:30px;
+     color: #FFC107;
+}
+
+.iconnps {
+    display: inline-block;
+    float: left;
+    font-size: 60px;
+    padding-top: 15px;
+    padding-left: 15px;
+     color: #FFC107;
 }
 
 .superatechse{
-	background-color: red;
+	background-color: #333333;
 	width: 600px;
-	height: 250px;
+	height: 300px;
 	margin-left: 30px;
 	border-radius: 20px;
 	position: absolute;
@@ -191,9 +231,9 @@ p.year {
 }
 
 .satis{
-	background-color: blue;
+	background-color:  #FFC107;
 	width: 340px;
-	height: 250px;
+	height: 200px;
 	margin-left: 20px;
 	border-radius: 20px;
 	position: absolute;
@@ -202,26 +242,25 @@ p.year {
 }
 
 .promprofjedi{
-	background-color: #DA00D7;
-	width: 472px;
-	height: 250px;
+	background-color: #333333;
+	width: 900px;
+	height: 300px;
 	margin-left: 30px;
 	border-radius: 20px;
 	position: absolute;
 	left:50px;
-	top:490px;
+	top:530px;
 	margin-bottom: 30px;
 }
 
 .satisfsprint{
-	background-color: #00AEDA;
-	width: 472px;
-	height: 255px;
-	margin-left: 540px;
+	background-color: #FFC107;
+	width: 900px;
+	height: 300px;
 	border-radius: 20px;
 	position: absolute;
-	left:50px;
-	top:490px;
+	left:85px;
+	top:850px;
 	margin-bottom: 30px;
 }
 
@@ -229,4 +268,21 @@ p.year {
     background-color: red;
     width: 100px;
     height: 100px;
+}
+
+.totalstudents p {
+    color: white;
+}
+
+#graph6 {
+    max-height: 300px;
+    max-width: 700px;
+    padding-left: 90px;
+}
+
+#graph7 {
+    max-height: 300px;
+    max-width: 700px;
+    padding-left: 90px;
+
 }
